@@ -1,0 +1,90 @@
+.book
+    height: 50rem
+    border-radius: .5rem
+    background: linear-gradient(110deg,rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, rgba(186, 133, 84, 0.2) 55.1%, rgba(161, 79, 3, 0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+    box-shadow: $box-shadow
+    overflow: hidden
+    @include respond(tab-port)
+        background: linear-gradient(110deg,rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 505%, rgba(186, 133, 84, 0.2) 55.1%, rgba(161, 79, 3, 0.2) 100%), url(../img/bg-form.jpg) center / cover no-repeat
+        height: 45rem
+
+.form
+    width: 70%
+    padding: 5rem 0 5rem 5rem
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+    @include respond(tab-land)
+        &__group:not(:last-child)
+            margin-bottom: 0
+    @include respond(tab-port)
+        width: 100%
+        padding: 3rem 0 3rem 3rem
+    &__input
+        width: 65%
+        font-size: $font-size-paragraph
+        font-weight: 400
+        letter-spacing: .2rem
+        padding: 2rem 0 2rem 2rem
+        color: $color-black
+        background: $color-white
+        border: none
+        border-bottom: .3rem solid transpaent
+        border-radius: .5rem
+        @include respond(tab-port)
+            width: 90%
+            box-shadow: $box-shadow
+        &:focus
+            outline: none
+            border-bottom: .3rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .3rem solid #D76363
+    &__label
+        display: block
+        font-size: $font-size-paragraph
+        font-weight: 400
+        letter-spacing: .2rem
+        margin-top: 1.5rem
+        margin-left: 1.5rem
+        transition: .5s all
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-1rem)
+    &__group-radio
+        display: inline-block
+        margin: 0 2rem 4rem 0
+        @include respond(tab-land)
+            display: block
+        @include respond(tab-port)
+            margin-bottom: 3rem
+    &__input-radio
+        display: none
+    &__label-radio
+        position: relative
+        cursor: pointer
+        padding-left: 4rem
+    &__button-radio
+        display: block
+        position: absolute
+        top: -.4rem
+        left: 0
+        height: 3rem
+        width: 3rem
+        border: .5rem solid $color-dark-brown
+        border-radius: 50%
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            height: 1.5rem
+            width: 1.5rem
+            border-radius: 50%
+            background: $color-dark-brown
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .2s all
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
