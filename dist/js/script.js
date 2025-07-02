@@ -16,6 +16,9 @@ item.addEventListener('click', function(){
 });
 });
 
+
+
+
 const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
 window.addEventListener('scroll', () => {

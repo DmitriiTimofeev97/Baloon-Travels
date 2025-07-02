@@ -1,8 +1,14 @@
+//Список секций сайта
+
+//Секция с группой из трёх увеличивающихся при наведении изображений
+
 .section-about
     padding: 8rem 0 12rem 0
     @include respond(tab-port)
         margin-bottom: 40rem
         padding: 5rem 3rem 0 3rem
+
+//Секция с группой карточек, при наведении смещающихся вверх
 
 .section-adventure
     padding: 21rem 0
@@ -17,16 +23,22 @@
     @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
         background: linear-gradient(90deg, rgba($color-light-brown, 0.7), rgba($color-black, 0.7)), url(../img/section-adventure-background-big.jpg) center / cover no-repeat
 
+//Секция с группой карточек, переворачивающихся при наведении
+
 .section-tour
     padding: 15rem 0 8rem 0
     @include respond(tab-port)
         padding: 8rem 0 0 0
+
+//Секция с отзывами клиентов
 
 .section-feedback
     position: relative
     padding: 8rem 0
     @include respond(tab-port)
         padding: 6rem 0 8rem 0
+
+//Секция с формой бронирования туров
 
 .section-book
     padding: 10rem
