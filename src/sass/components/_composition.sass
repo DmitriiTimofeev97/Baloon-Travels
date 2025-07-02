@@ -1,5 +1,7 @@
 .composition
     position: relative
+    @include respond(tab-port)
+        margin-bottom: 4rem
     &__photo
         position: absolute
         width: 55%
@@ -19,7 +21,7 @@
             right: 20rem
         &:hover
             outline: 1rem solid $color-light-brown
-            transform: scale(1.1)
+            transform: scale(1.05)
             z-index: 20
     &:hover &__photo:not(:hover)
         transform: scale(.95)
