@@ -16,6 +16,8 @@
         @include respond(tab-port)
             font-size: 2.5rem
             padding: 2rem 5rem
+        @include respond(phone)
+            padding: 2rem
         @media only screen and (max-width: 900px), (hover: none)
             font-size: 1.4rem
         &:hover
@@ -65,7 +67,7 @@
     position: fixed
     width: 7rem
     height: 7rem
-    bottom: 11rem
+    bottom: 6rem
     right: 8rem
     padding: 0 1rem 2rem 1rem
     font-size: 5rem
@@ -76,6 +78,8 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, .3)
     cursor: pointer
     transition: .3s all
-    z-index: 500
+    z-index: 50
     &:hover
         transform: scale(1.1)
+    @include respond(phone)
+        padding: 0

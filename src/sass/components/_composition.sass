@@ -4,6 +4,8 @@
     position: relative
     @include respond(tab-port)
         margin-bottom: 4rem
+    @include respond(phone)
+        margin: 0
     &__photo
         position: absolute
         width: 55%
@@ -15,12 +17,19 @@
         &_n1
             top: 0
             left: 2rem
+            @include respond(phone)
+                left: 0
         &_n2
             top: 9rem
             right: 0
+            @include respond(phone)
+                top: 4rem
         &_n3
             top: 16rem
             right: 20rem
+            @include respond(phone)
+                top: 8rem
+                right: 10rem
         &:hover
             outline: 1rem solid $color-light-brown
             transform: scale(1.05)
