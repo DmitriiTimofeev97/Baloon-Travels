@@ -61,6 +61,8 @@
         @include respond(tab-land)
             display: block
         @include respond(tab-port)
+            display: flex
+            align-items: center
             margin-bottom: 3rem
     &__input-radio
         display: none
@@ -77,6 +79,8 @@
         width: 3rem
         border: .5rem solid $color-dark-brown
         border-radius: 50%
+        @include respond(phone)
+            top: -.8rem
         &::after
             content: ""
             display: block
