@@ -6,9 +6,9 @@
 html
     scroll-behavior: smooth
     font-size: 62.5%
-    @include respond(tab-land)
+    @include respond(tab-horz)
         font-size: 56.25%
-    @include respond(tab-port)
+    @include respond(tab-vert)
         font-size: 50%
     @include respond(phone)
         font-size: 40%
@@ -20,6 +20,8 @@ body
     padding: 5rem
     position: relative
     z-index: -4
+    @media only screen and (max-width: 1340px)
+        padding: 0
 
 .container
     position: relative

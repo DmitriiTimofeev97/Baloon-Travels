@@ -20,9 +20,9 @@ body
         animation-duration: 1.7s
         animation-timing-function: ease
         backface-visibility: hidden
-        @include respond(tab-land)
+        @include respond(tab-horz)
             font-size: 3.5rem
-        @include respond(tab-port)
+        @include respond(tab-vert)
             font-size: 3rem
             letter-spacing: .5rem
             line-height: 4rem
@@ -41,9 +41,9 @@ body
         animation-duration: 1.7s
         animation-timing-function: ease
         backface-visibility: hidden
-        @include respond(tab-land)
+        @include respond(tab-horz)
             font-size: 3rem
-        @include respond(tab-port)
+        @include respond(tab-vert)
             font-size: 2.3rem
             letter-spacing: .3rem
         @include respond(phone)
@@ -58,18 +58,20 @@ body
     -webkit-background-clip: text
     color: transparent
     transition: .3s all ease-out
-    @include respond(tab-land)
+    @include respond(tab-horz)
         font-size: 3rem
-    @include respond(tab-port)
+    @include respond(tab-vert)
         font-size: 2.8rem
         letter-spacing: .3rem
     &:hover
         transform: skewX(10deg) skewY(2deg) scale(1)
         text-shadow: $shadow-h2
         backface-visibility: hidden
+        @media only screen and (max-width: 1340px)
+            transform: none
     &_white
         color: $color-white
-        @include respond(tab-port)
+        @include respond(tab-vert)
             letter-spacing: .3rem
 
 .title-third
@@ -77,7 +79,7 @@ body
     font-weight: 700
     letter-spacing: .2rem
     text-transform: uppercase
-    @include respond(tab-land)
+    @include respond(tab-horz)
         font-size: 1.8rem
     @include respond(phone)
         font-size: 1.5rem
@@ -87,5 +89,5 @@ body
     font-weight: 400
     letter-spacing: .2rem
     line-height: 140%
-    @include respond(tab-land)
+    @include respond(tab-horz)
         font-size: 1.5rem

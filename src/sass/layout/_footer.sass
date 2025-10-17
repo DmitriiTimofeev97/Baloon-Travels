@@ -12,10 +12,10 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
-        @include respond(tab-land)
+        @include respond(tab-horz)
             &:not(:last-child)
                 margin-right: 1.6rem
-        @include respond(tab-port)
+        @include respond(tab-vert)
             &:not(:last-child)
                 margin: 0
                 padding: 2rem
@@ -32,3 +32,5 @@
         &:hover
             transform: rotate(5deg) scale(1.2)
             color: $color-dark-brown
+            @media only screen and (max-width: 1340px)
+                transform: none

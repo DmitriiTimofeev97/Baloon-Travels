@@ -36,8 +36,8 @@
                 clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
     &:hover &__side_front
         transform: rotateY(-180deg)
-        @include respond(tab-port)
-                transform: rotateY(0deg)
+        @media only screen and (max-width: 1340px)
+            transform: rotateY(0deg)
     &:hover &__side_back
         transform: rotateY(0deg)
     &__img
@@ -45,17 +45,17 @@
         height: 21rem
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         &_1
-            background: $color-light-brown url(../img/tour-card-img-1.jpg) center / cover no-repeat
+            background: $color-light-brown url(../img/tour-card/tour-card-img-1.jpg) center / cover no-repeat
             @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
-                background: $color-light-brown url(../img/tour-card-img-1-big.jpg) center / cover no-repeat
+                background: $color-light-brown url(../img/tour-card/tour-card-img-1-big.jpg) center / cover no-repeat
         &_2
-            background: $color-light-brown url(../img/tour-card-img-2.jpg) center / cover no-repeat
+            background: $color-light-brown url(../img/tour-card/tour-card-img-2.jpg) center / cover no-repeat
             @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
-                background: $color-light-brown url(../img/tour-card-img-2-big.jpg) center / cover no-repeat
+                background: $color-light-brown url(../img/tour-card/tour-card-img-2-big.jpg) center / cover no-repeat
         &_3
-            background: $color-light-brown url(../img/tour-card-img-3.jpg) center / cover no-repeat
+            background: $color-light-brown url(../img/tour-card/tour-card-img-3.jpg) center / cover no-repeat
             @media (min-resolution: 192dpi) and (min-width: 670px), (min-width: 1340px)
-                background: $color-light-brown url(../img/tour-card-img-3-big.jpg) center / cover no-repeat
+                background: $color-light-brown url(../img/tour-card/tour-card-img-3-big.jpg) center / cover no-repeat
         @media only screen and (max-width: 900px), (hover: none)
             height: 30rem
     &__title
@@ -67,7 +67,7 @@
         letter-spacing: .2rem
         text-transform: uppercase
         text-align: right
-        @include respond(tab-port)
+        @include respond(tab-vert)
             top: 25.5rem
     &__span
         background: linear-gradient(90deg, $color-light-brown, $color-dark-brown)
@@ -83,7 +83,7 @@
         ul
             list-style: none
             margin: 0 auto
-            @include respond(tab-port)
+            @include respond(tab-vert)
                 width: 65%
             li
                 display: inline-block
@@ -94,7 +94,7 @@
                 border-bottom: 1px solid $color-gray
                 &:not(:last-child)
                     margin-bottom: 2rem
-                @include respond(tab-port)
+                @include respond(tab-vert)
                     font-size: 2rem
     &__backside-box
         position: absolute

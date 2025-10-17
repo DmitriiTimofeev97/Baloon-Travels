@@ -4,7 +4,7 @@
 
 .section-about
     padding: 8rem 0 12rem 0
-    @include respond(tab-port)
+    @include respond(tab-vert)
         margin-bottom: 40rem
         padding: 5rem 3rem 0 3rem
     @include respond(phone)
@@ -18,7 +18,7 @@
     transform: skewY(5deg)
     & > *
         transform: skewY(-5deg)
-    @include respond(tab-land)
+    @include respond(tab-horz)
         padding: 15rem 0
     @include respond(phone)
         padding: 10rem 3rem
@@ -29,15 +29,17 @@
 
 .section-tour
     padding: 15rem 0 8rem 0
-    @include respond(tab-port)
-        padding: 8rem 0 0 0
+    @include respond(tab-vert)
+        padding: 8rem 0 8rem 0
+    @include respond(phone)
+        padding-bottom: 0
 
 //Секция с отзывами клиентов
 
 .section-feedback
     position: relative
     padding: 8rem 0
-    @include respond(tab-port)
+    @include respond(tab-vert)
         padding: 6rem 0 8rem 0
 
 //Секция с формой бронирования туров
@@ -45,5 +47,5 @@
 .section-book
     padding: 10rem
     background: linear-gradient(90deg, $color-light-brown, $color-dark-brown)
-    @include respond(tab-port)
+    @include respond(tab-vert)
         padding: 4rem

@@ -16,6 +16,11 @@
         top: 10rem
         right: 8rem
         z-index: 200
+        @media only screen and (max-width: 1340px)
+            top: 6rem
+        @include respond(phone)
+            top: 3rem
+            right: 3rem
     &__background
         position: fixed
         top: 11rem
@@ -26,6 +31,11 @@
         background: radial-gradient($color-light-brown, $color-dark-brown)
         z-index: 100
         transition: 1s all cubic-bezier(0.68, -0.6, 0.32, 1.6)
+        @media only screen and (max-width: 1340px)
+            top: 6rem
+        @include respond(phone)
+            top: 4rem
+            right: 4rem
     &__nav
         position: fixed
         height: 100vh
@@ -59,6 +69,8 @@
             background-size: 230%
             padding: 1rem 2rem
             transition: .3s all
+            @include respond(phone)
+                font-size: 3rem
         &:hover, &:active
             background-position: 100%
             color: $color-dark-brown

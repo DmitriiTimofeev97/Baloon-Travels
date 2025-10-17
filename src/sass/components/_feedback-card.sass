@@ -7,12 +7,12 @@
     margin: 0 auto
     padding: 6rem
     transform: skewX(-20deg)
-    @include respond(tab-port)
+    @include respond(tab-vert)
         transform: skewX(-5deg)
         padding: 3rem
     & > *
         transform: skewX(20deg)
-        @include respond(tab-port)
+        @include respond(tab-vert)
             transform: skewX(5deg)
             text-align: center
         
@@ -27,7 +27,7 @@
         -webkit-shape-outside: circle(50% at 50% 50%)
         margin-right: 4rem
         overflow: hidden
-        @include respond(tab-port)
+        @include respond(tab-vert)
             float: none
             margin: 0 auto
             margin-bottom: 3rem
